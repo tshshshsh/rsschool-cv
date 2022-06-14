@@ -1,1 +1,168 @@
-body {margin: 0;}
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Assistant', sans-serif;
+    color: #261d1e;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    min-height: 100%;
+    margin: 0;
+}
+.link {
+    color: #261d1e;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.link:before {
+     content: '';
+     position: absolute;
+     bottom: -2px;
+     left: 0;
+     right: 50%;
+     height: 3px;
+     background-color: #261d1e;
+     transform: scaleX(0);
+     transform-origin: bottom left;
+     transition: transform 0.3s;
+ }
+
+.link:after {
+     content: '';
+     position: absolute;
+     bottom: -2px;
+     right: 0;
+     left : 50%;
+     height: 3px;
+     background-color: #261d1e;
+     transform: scaleX(0);
+     transform-origin: bottom right;
+     transition: transform 0.3s;
+ }
+
+.link:hover:before {
+    transform: scaleX(1);
+}
+
+.link:hover:after {
+     transform: scaleX(1);
+}
+.link:visited {
+    color: #261d1e;
+}
+
+.main-menu {
+    background: #e0c0cd;
+}
+
+.main-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.main-menu ul li {
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 60px;
+}
+
+.header-wrapper h1 {
+    margin: 10px 0;
+}
+
+main {
+    flex-grow: 1;
+    margin-bottom: 60px;
+}
+
+footer {
+    padding: 15px 20px;
+
+    background: #e0c0cd;
+}
+
+.centered {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.information {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block-info {
+    width: 50%;
+    padding: 10px 20px;
+}
+
+.block-info-header {
+    display: inline-block;
+    position: relative;
+}
+
+.block-info-header:after {
+    position: absolute;
+    bottom: -5px;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #e0c0cd;
+}
+
+pre {
+    white-space: break-spaces;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.rss-logo {
+    width: 80px;
+    height: 32px;
+    background: url(assets/img/rs-school-js.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.list-value {
+    font-weight: bold;
+}
+
+@media (max-width: 680px) {
+    .block-info {
+        width: 100%;
+    }
+    nav ul li {
+       display: none;
+    }
+    .header-wrapper {
+        flex-direction: column;
+        padding: 30px;
+        text-align: center;
+    }
+}
