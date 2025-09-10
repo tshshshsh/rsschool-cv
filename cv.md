@@ -20,8 +20,11 @@
 - English - B2-C1
 
 ***
-## Code example:
+## Courses
+![rs-stage0](/assets/rs-stage-0.png)
 
+***
+## Code example
 ```
 function formatDuration (seconds) {
   const sec = seconds % 60;
